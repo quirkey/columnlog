@@ -1,5 +1,5 @@
 module Columnlog
-  class Credentails
+  class Credentials
 
     @@default_path = File.join(File.dirname(__FILE__), '..', '..', 'config', 'credentials.yml')
     @@credentials = nil

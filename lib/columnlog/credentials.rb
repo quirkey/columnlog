@@ -11,7 +11,7 @@ module Columnlog
       end
 
       def get(*credentials)
-        load #unless self.loaded?
+        load unless self.loaded?
         @@credentials.deep_value(*credentials) || raise("No credentials for '#{credentials}'")
       end
       

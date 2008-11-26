@@ -5,7 +5,7 @@ class SuperHash < HashWithIndifferentAccess
     Array(key_array).each do |key|
       value = value.fetch(key, nil) 
     end
-    value
+    value.is_a?(Hash) ? SuperHash.new(value) : value
   rescue NoMethodError
     nil
   end

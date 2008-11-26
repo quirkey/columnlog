@@ -1,0 +1,27 @@
+<div id="left" style="float:left;width:250px;padding:3px;margin:5px;">
+  <h1>Tweets</h1>
+  <br/>
+  <% Columnlog::App::Twitters.new.get(10).each do |tweet| %>
+    <b><%= tweet["text"] %></b> <br/> <i>(<%= (tweet["created_at"]) %>)</i>
+    <p/>	
+  <% end %>
+</div>
+
+<div id="middle" style="float:left;width:250px;padding:3px;margin:5px;">
+  <h1>Tumbles</h1>
+  <br/>
+  <% Columnlog::App::Twitters.new.get(10).each do |tweet| %>
+    <b><%= tweet["text"] %></b> <br/> <i>(<%= (tweet["created_at"]) %>)</i>
+    <p/>	
+  <% end %>
+</div>
+
+<div id="right" style="float:left;width:250px;padding:3px;margin:5px;">
+  <h1>Posts</h1>
+  <br/>
+  <% Columnlog::App::Twitters.new.get(10).each do |tweet| %>
+    <b><%= tweet["text"] %></b> <br/> <i>(<%= (tweet["created_at"]) %>)</i>
+    <p/>	
+  <% end %>
+</div>
+<p style="clear:both;">

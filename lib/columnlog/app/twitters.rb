@@ -17,6 +17,8 @@ module Columnlog
         if self.authorized?
           Twitter::Search.new.from(@user).each_with_index do |tweet, index|
             if index < howmany
+              tmp = Columnlog::App::Twitters.date_format(tweet["created_at"])
+              tweet["created_at"] = tmp
               out << tweet
             end
           end
@@ -45,6 +47,11 @@ module Columnlog
       def credential_load(user,pass)
         @twit ||= Twitter::Base.new(user,pass)
         @user ||= user
+      end
+      
+      def self.date_format(date_u)
+        date = date_u.to_datetime
+        "#{date.month}/#{date.day}/#{date.year} - #{date.hour}:#{date.min}:#{date.sec}"
       end
       
     end

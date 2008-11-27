@@ -2,8 +2,9 @@ module Columnlog
   module Apps
     class Twitter < Base
 
-      def post(contents)
-        app.post(contents)
+      def post(content)
+        content = content.is_a?(Post) ? content.body : content
+        app.post(content)
       end
 
       def get(howmany = 10)

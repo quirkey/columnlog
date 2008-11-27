@@ -1,29 +1,19 @@
 module Columnlog
   module Apps
-    class Twitter
-      
+    class Twitter < Base
+
       def post(contents)
-        if self.authorized?
-          @twit.post(contents)
-        end
+        app.post(contents)
       end
-      
+
       def get(howmany = 10)
-        out = []
-        if self.authorized?
-          ::Twitter::Search.new.from(@user).each_with_index do |tweet, index|
-            if index < howmany
-              tmp = Columnlog::App::Twitters.date_format(tweet["created_at"])
-              tweet["created_at"] = tmp
-              out << tweet
-            end
-          end
-        else
-          out << "Authorization Failed"
+        posts = []
+        ::Twitter::Search.new.from(settings.username).each do |post|
+          posts << to_post(post)
         end
-        out
+        posts
       end
-            
+
       def app
         @app ||= ::Twitter::Base.new(settings.username,settings.password)
         unless @app.verify_credentials.to_html == "Authorized"
@@ -31,12 +21,11 @@ module Columnlog
         end
         @app
       end
-      
-      def self.date_format(date_u)
-        date = date_u.to_datetime
-        "#{date.month}/#{date.day}/#{date.year} - #{date.hour}:#{date.min}:#{date.sec}"
+
+      protected
+      def to_post(tweet)
+        Post.new(:body => tweet.text, :author => tweet.user.screen_name, :time => tweet.created_at, :url => '')
       end
-      
     end
   end
 end

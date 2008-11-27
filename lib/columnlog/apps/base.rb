@@ -5,6 +5,7 @@ module Columnlog
       
       def initialize(settings = SuperHash.new)
         @settings = settings
+        app
       end
       
       def post(params); end

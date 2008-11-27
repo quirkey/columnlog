@@ -18,5 +18,8 @@ module Columnlog
       @settings ||= SuperHash.new(@attributes[:settings])
     end
     
+    def app
+      @app ||= Object.const_get("Columnlog::Apps::#{app_type}").new(settings)
+    end
   end
 end

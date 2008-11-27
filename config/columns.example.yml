@@ -1,14 +1,14 @@
 ---
 - id: 1
   name: twitter
-  app: Twitters
+  app_type: Twitters
   settings:
     username: test
     password: password
   shortcut: '*tw'
 - id: 2
   name: tumblr
-  app: Tumblr
+  app_type: Tumblr
   settings:
     username: test
     password: password

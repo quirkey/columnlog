@@ -1,5 +1,5 @@
 module Columnlog
-  module App
+  module Apps
     class Tumblrs
       
       require 'net/http'

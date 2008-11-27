@@ -1,5 +1,5 @@
 module Columnlog
-  module App
+  module Apps
     class Twitter
       
       def post(contents)

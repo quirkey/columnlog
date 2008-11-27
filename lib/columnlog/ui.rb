@@ -43,7 +43,3 @@ post '/new' do
   Columnlog::App::Twitters.new.post(params[:tweet])
   redirect '/'
 end
-
-get '/about' do
-  "I'm running on Version " + Sinatra::VERSION
-end

@@ -2,21 +2,19 @@ module Columnlog
   module App
     class Tumblrs
       
-      require 'net/http'
-      require 'uri'
-      require 'tumblr'
+      require 'xml'
       
       def post(params)
       end
       
       def get(howmany = 10)
         out = []
-        Tumblr::API.read("#{@user}.tumblr.com") do |pager|
-          data = pager.page(0)
-          p data.tumblelog
-          data.posts.each do |post|
-            out << post
-          end
+        if self.authorized?
+          url = "http://mrb.tumblr.com/api/read"
+          parser = XML::Parser.new
+          parser.file = url
+          parsed = parser.parse
+          parsed.find('posts').collect{|x| x.find('post').collect{|x| out << x}}
         end
         out
       end
@@ -25,12 +23,12 @@ module Columnlog
         user = Columnlog::Credentials.get(:tumblr).username
         pass = Columnlog::Credentials.get(:tumblr).password
         
-        if user && pass
-          Tumblrs.credential_load(user,pass)
+        if !user.nil? && !pass.nil?
+          self.credential_load(user,pass)
         end
       end
       
-      def self.credential_load(user,pass)
+      def credential_load(user,pass)
         @user ||= user
       end
       

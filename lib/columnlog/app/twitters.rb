@@ -31,7 +31,7 @@ module Columnlog
       def authorized?
         user = Columnlog::Credentials.get(:twitter).username
         pass = Columnlog::Credentials.get(:twitter).password
-        if user && pass
+        if !user.nil? && !pass.nil?
           if Twitter::Base.new(user,pass).verify_credentials.to_html == "Authorized"
             auth ||= true
             self.credential_load(user,pass)

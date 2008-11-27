@@ -23,26 +23,13 @@ module Columnlog
         end
         out
       end
-      
-      def authorized?
-        user = Columnlog::Credentials.get(:twitter).username
-        pass = Columnlog::Credentials.get(:twitter).password
-        if user && pass
-          if ::Twitter::Base.new(user,pass).verify_credentials.to_html == "Authorized"
-            auth ||= true
-            self.credential_load(user,pass)
-          else
-            auth ||= false
-          end
-        else
-          auth ||= false
+            
+      def app
+        @app ||= ::Twitter::Base.new(settings.username,settings.password)
+        unless @app.verify_credentials.to_html == "Authorized"
+          raise(Errors::UnauthorizedApp, "Could not log you in for twitter with username: #{settings.username}")
         end
-        auth
-      end
-      
-      def credential_load(user,pass)
-        @twit ||= ::Twitter::Base.new(user,pass)
-        @user ||= user
+        @app
       end
       
       def self.date_format(date_u)

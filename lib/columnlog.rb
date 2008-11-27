@@ -2,11 +2,13 @@ require 'rubygems'
 require 'activesupport'
 require 'yaml'
 require 'chronic'
+require 'static_model'
 
 %w{
   super_hash 
   app 
-  post 
+  post
+  column
   credentials 
   app/twitters 
   app/tumblrs

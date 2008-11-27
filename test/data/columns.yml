@@ -1,0 +1,13 @@
+---
+- id: 1
+  name: twitter
+  app: Twitters
+  username: test
+  password: password
+  shortcut: '*tw'
+- id: 2
+  name: tumblr
+  app: Tumblr
+  username: test
+  password: password
+  shortcut: '*tum'

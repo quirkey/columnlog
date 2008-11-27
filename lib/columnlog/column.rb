@@ -19,7 +19,7 @@ module Columnlog
     end
     
     def app
-      @app ||= Object.const_get("Columnlog::Apps::#{app_type}").new(settings)
+      @app ||= "Columnlog::Apps::#{app_type}".constantize.new(settings)
     end
   end
 end

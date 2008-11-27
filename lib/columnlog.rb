@@ -19,7 +19,6 @@ end
   super_hash 
   post
   column
-  credentials 
   apps/base
   apps/twitter 
   apps/tumblrs

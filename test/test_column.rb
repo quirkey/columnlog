@@ -36,11 +36,28 @@ class TestColumn < Test::Unit::TestCase
         end
         
         should "load attributes for column" do
-          assert_equal 'test', @column.username
+          assert_equal 'test', @column.settings.username
         end
         
       end
 
     end
+    
+    context "a Column" do
+      setup do
+        @column = Column['twitter']
+      end
+      
+      should "return a settings as a superhash" do
+        assert @column.settings
+        assert @column.settings.is_a?(SuperHash)
+        assert_equal 'test', @column.settings[:username]
+      end
+      
+      should "load shortcut as a string" do
+        assert_equal '*tw', @column.shortcut
+      end
+    end
   end
+  
 end

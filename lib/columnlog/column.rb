@@ -1,6 +1,6 @@
 module Columnlog
   class Column < StaticModel::Base
-   
+   set_data_file File.join(Columnlog.root, 'config', 'columns.yml')
     class << self
       
       def [](name_or_id)
@@ -12,6 +12,10 @@ module Columnlog
         end
       end
       
+    end
+    
+    def settings
+      @settings ||= SuperHash.new(@attributes[:settings])
     end
     
   end

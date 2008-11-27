@@ -12,6 +12,14 @@ module Columnlog
         end
       end
       
+      def shortcuts
+        map = {}
+        Column.all.each do |column|
+          map[column.shortcut] = column.id
+        end
+        map
+      end
+      
     end
     
     def settings

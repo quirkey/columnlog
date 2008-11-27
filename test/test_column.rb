@@ -40,6 +40,25 @@ class TestColumn < Test::Unit::TestCase
         end
         
       end
+      
+      context "shortcuts" do
+        setup do
+          @shortcuts = Column.shortcuts
+        end
+        
+        should "collect all available shortcuts as a hash" do
+          assert @shortcuts.is_a?(Hash)
+          assert_equal Column.count, @shortcuts.length
+        end
+        
+        should "have shortcuts as keys" do
+          assert @shortcuts.keys.include?('*tw')
+        end
+        
+        should "map to ids for values" do
+          assert @shortcuts.values.include?(1)
+        end
+      end
 
     end
     

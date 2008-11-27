@@ -17,10 +17,10 @@ module Columnlog
 
       def app
         @app ||= ::Twitter::Base.new(settings.username,settings.password)
-        unless @app.verify_credentials.to_html == "Authorized"
-          raise(Errors::UnauthorizedApp, "Could not log you in for twitter with username: #{settings.username}")
-        end
+        unathorized! unless @app.verify_credentials.to_html == "Authorized"
         @app
+      rescue Twitter::CantConnect
+        unathorized!
       end
 
       protected

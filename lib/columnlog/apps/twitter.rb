@@ -23,9 +23,11 @@ module Columnlog
         unathorized!
       end
 
-      protected
-      def to_post(tweet)
-        Post.new(:body => tweet.text, :author => tweet.user.screen_name, :time => tweet.created_at, :url => '')
+      def to_post(tweet, other = {})
+        Post.new({:body => tweet.text, 
+                  :author => tweet.user.screen_name, 
+                  :time => tweet.created_at, 
+                  :url => "http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"}.merge(other))
       end
     end
   end

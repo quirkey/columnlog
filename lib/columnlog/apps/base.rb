@@ -11,7 +11,9 @@ module Columnlog
       def post(params); end
       def get(howmany = 10); end
       
-      def to_post(element); end
+      def to_post(element, other = {})
+        Post.new(other)
+      end
       
       protected
       def app; end

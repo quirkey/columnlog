@@ -1,6 +1,7 @@
 module Columnlog
   class Column < StaticModel::Base
    set_data_file File.join(Columnlog.root, 'config', 'columns.yml')
+   
     class << self
       
       def [](name_or_id)
@@ -18,6 +19,13 @@ module Columnlog
           map[column.shortcut] = column.id
         end
         map
+      end
+      
+      def shortcut_scan(text_block)
+        return if text_block.nil?
+        shortcuts.each do |shortcut, id|
+          return Column[id] if text_block.strip =~ /^#{Regexp.escape(shortcut)}/
+        end; nil
       end
       
     end

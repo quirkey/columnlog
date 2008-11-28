@@ -63,14 +63,27 @@ class TestColumn < Test::Unit::TestCase
       context "shortcut scan" do
         context "when the shortcut is the beginning of the text block" do
           setup do
-            
+            @column = Column.shortcut_scan("*tw this is a tweet")
+          end
+          
+          should "return a column" do
+            assert @column.is_a?(Column)
+          end
+          
+          should "return the correct column for the shortcut" do
+            assert_equal Column['twitter'], @column
           end
         end
+        
         context "when there are no shortcuts" do
-
+          should "return nil" do
+            assert_nil Column.shortcut_scan("who knows where this is going")
+          end
         end
-        context "when the shortut is in the middle of the text" do
-
+        context "when the shortcut is in the middle of the text" do
+          should "return nil" do
+            assert_nil Column.shortcut_scan("this could have been a tweet *tw if i was using this correctly")
+          end
         end
       end
 

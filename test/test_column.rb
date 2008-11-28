@@ -63,11 +63,13 @@ class TestColumn < Test::Unit::TestCase
       context "shortcut scan" do
         context "when the shortcut is the beginning of the text block" do
           setup do
-            @column = Column.shortcut_scan("*tw this is a tweet")
+            @column, @text_block = Column.shortcut_scan("*tw this is a tweet")
           end
           
-          should "return a column" do
+          should "return an array of the column and the text without the shortcut" do
             assert @column.is_a?(Column)
+            assert @text_block.is_a?(String)
+            assert_equal 'this is a tweet', @text_block
           end
           
           should "return the correct column for the shortcut" do

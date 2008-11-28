@@ -57,3 +57,9 @@ class SuperHash < HashWithIndifferentAccess
     end
   end
 end
+
+class Hash
+  def superize
+    SuperHash.new(self)
+  end
+end

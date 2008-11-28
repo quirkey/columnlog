@@ -23,8 +23,10 @@ module Columnlog
       
       def shortcut_scan(text_block)
         return if text_block.nil?
+        text_block = text_block.strip
         shortcuts.each do |shortcut, id|
-          return Column[id] if text_block.strip =~ /^#{Regexp.escape(shortcut)}/
+          exp = /^#{Regexp.escape(shortcut)}\ /
+          return [Column[id], text_block.gsub(exp, '')] if text_block =~ exp
         end; nil
       end
       

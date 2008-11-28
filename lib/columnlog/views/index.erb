@@ -2,7 +2,11 @@
   <div id="left" style="float:left;width:250px;padding:3px;margin:5px;">
     <h1><%= column.name.capitalize %></h1>
     <br/>
-    <%= column.app.get(10) %>
+    <% column.app.get(10).each do |post| %>
+      <b><%= post.body %></b><br/>
+      <i><%= post.posted_at %></i>
+      <p/>
+    <% end %>
   </div>	
 <% end %>
 <p style="clear:both;">

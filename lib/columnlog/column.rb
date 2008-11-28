@@ -32,6 +32,8 @@ module Columnlog
       
     end
     
+    delegate :post, :get, :to => :app
+    
     def settings
       @settings ||= SuperHash.new(@attributes[:settings])
     end

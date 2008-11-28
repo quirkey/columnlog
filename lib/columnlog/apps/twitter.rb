@@ -1,7 +1,7 @@
 module Columnlog
   module Apps
     class Twitter < Base
-
+      
       def post(content)
         content = content.is_a?(Post) ? content.body : content
         app.post(content)
@@ -17,15 +17,15 @@ module Columnlog
 
       def app
         @app ||= ::Twitter::Base.new(settings.username,settings.password)
-        unathorized! unless @app.verify_credentials.to_html == "Authorized"
+        unauthorized! unless @app.verify_credentials.to_html == "Authorized"
         @app
       rescue Twitter::CantConnect
-        unathorized!
+        unauthorized!
       end
 
       protected
       def to_post(tweet)
-        Post.new(:body => tweet.text, :author => tweet.user.screen_name, :time => tweet.created_at, :url => '')
+        Post.new(:body => tweet["text"], :author => tweet["user"], :time => tweet["created_at"], :url => '')
       end
     end
   end

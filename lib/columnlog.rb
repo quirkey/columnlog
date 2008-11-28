@@ -6,7 +6,7 @@ require 'static_model'
 require 'net/http'
 require 'uri'
 require 'twitter'
-
+require 'xml'
 
 module Columnlog
   
@@ -21,7 +21,7 @@ end
   column
   apps/base
   apps/twitter 
-  apps/tumblrs
+  apps/tumblr
 }.each do |file|
     require File.join(File.dirname(__FILE__), 'columnlog', file)
   end

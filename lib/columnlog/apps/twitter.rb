@@ -25,10 +25,10 @@ module Columnlog
 
       protected
       def to_post(tweet, other = {})
-        Post.new({:body => tweet.text, 
-                  :author => tweet.user.screen_name, 
-                  :time => tweet.created_at, 
-                  :url => "http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"}.merge(other))
+        Post.new({:body => tweet["text"], 
+                  :author => tweet["from_user"], 
+                  :time => tweet["created_at"], 
+                  :url => "http://twitter.com/#{tweet['from_user']}/status/#{tweet['id']}"}.merge(other))
       end
     end
   end

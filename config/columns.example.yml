@@ -1,15 +1,17 @@
 ---
-- id: 1
-  name: twitter
-  app_type: Twitter
-  settings:
-    username: test
-    password: test
-  shortcut: '*tw'
-- id: 2
-  name: tumblr
-  app_type: Tumblr
-  settings:
-    username: test
-    password: test
-  shortcut: '*tum'
+title: My Columns
+records:
+  - id: 1
+    name: twitter
+    app_type: Twitter
+    settings:
+      username: test
+      password: test
+    shortcut: '*tw'
+  - id: 2
+    name: tumblr
+    app_type: Tumblr
+    settings:
+      username: test
+      password: test
+    shortcut: '*tum'

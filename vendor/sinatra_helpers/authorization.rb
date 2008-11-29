@@ -1,3 +1,7 @@
+# originaly from 
+# http://www.gittr.com/index.php/archive/sinatra-basic-authentication-selectively-applied/
+# modifications added
+
 module Sinatra
   module Authorization
  

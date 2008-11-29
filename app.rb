@@ -13,6 +13,7 @@ get '/new' do
 end
 
 post '/new' do
-  Columnlog::App::Twitters.new.post(params[:tweet])
+  @post = Columnlog::Post.new(:body => params['post_body'])
+  @post.save
   redirect '/'
 end

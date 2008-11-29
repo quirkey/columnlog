@@ -3,6 +3,7 @@ module Columnlog
     attr_accessor :column, :title, :body, :url, :author, :posted_at
     
     def initialize(params = {})
+      return unless params
       params     = params.superize
       @title     = nil_if_blank? params[:title]
       @body      = nil_if_blank? params[:body]

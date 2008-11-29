@@ -37,11 +37,15 @@ jQuery.fn.wordCount = function(params)
 };
 </script>
 <form name="input" action="/new" method="post">
-  <textarea name="word_count" id="word_count" cols="70" rows="6" style="font-family:geneva;font-size:18px;"></textarea>
+  <textarea name="post_body" id="word_count" cols="70" rows="6" style="font-family:geneva;font-size:18px;"></textarea>
   <br/>
   <input type = "submit" value="Say It" id="input_box">
 </form>
 <p/>
 <h2>You're working on a <span id="display_count">0</span> Character <span id="display_message"></span> Message</h2>
 
-<script type="text/javascript">$('#word_count').wordCount();</script>
+<script type="text/javascript">
+$(function() {
+	$('#word_count').wordCount();
+});
+</script>

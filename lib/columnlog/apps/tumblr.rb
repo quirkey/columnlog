@@ -2,23 +2,29 @@ module Columnlog
   module Apps
     class Tumblr < Base
 
-      def post(params)
+      def post(content)
+        content = content.is_a?(Post) ? content.body : content
+        app.post(content)
       end
 
       def get(howmany = 10)
         out = []
-        # url = "http://mrb.tumblr.com/api/read"
-        # parser = XML::Parser.new
-        # parser.file = url
-        # parsed = parser.parse
-        # parsed.find('posts').collect{|x| x.find('post').collect{|x| out << x}}
+        doc = Nokogiri::HTML.parse(open("http://#{settings["username"]}.tumblr.com/api/read")).xpath('//post').collect{|x| out << to_post(x)}
         out
       end
 
       def app
         settings
       end
+      
+      protected
+      def to_post(tumble, other = {})
+        Post.new({:body => tumble["link-url"], 
+                  :time => tumble["created_at"],
+                  :url => tumble["url"]})
+      end
 
     end
   end
 end
+

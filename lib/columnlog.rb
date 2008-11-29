@@ -4,8 +4,9 @@ require 'yaml'
 require 'chronic'
 require 'static_model'
 require 'net/http'
-require 'uri'
+require 'open-uri'
 require 'twitter'
+require 'nokogiri'
 require 'xml'
 
 module Columnlog
@@ -22,6 +23,7 @@ end
   apps/base
   apps/twitter 
   apps/tumblr
+  apps/gist
 }.each do |file|
     require File.join(File.dirname(__FILE__), 'columnlog', file)
   end

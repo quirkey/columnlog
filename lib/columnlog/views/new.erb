@@ -1,4 +1,47 @@
+<script type="text/javascript">  
+jQuery.fn.wordCount = function(params)
+{
+   var p =  {
+     counterElement:"display_count"
+   };
+   var q = {
+     messageElement:"display_message"	
+   }
+  var total_words;
+
+  if(params) {
+      jQuery.extend(p, params);
+  }
+
+  //for each keypress function on text areas
+  this.keypress(function()
+  {
+   total_words=this.value.length;
+   jQuery('#'+p.counterElement).html(total_words);
+   
+   if(this.value.charAt(0) == "*"){
+     if(this.value.substring(1,3) == "tw"){
+        jQuery('#'+q.messageElement).html("Twitter");
+        jQuery('#'+p.counterElement).html(total_words-3);
+        if(this.value.length > 144){
+	      jQuery('#'+q.messageElement).html("TOO LONG Twitter")
+        }
+      } else if (this.value.substring(1,3) == "tu"){
+	    jQuery('#'+q.messageElement).html("Tumblr");
+        jQuery('#'+p.counterElement).html(total_words-3);
+	  }
+    } else {
+	  jQuery('#'+q.messageElement).html("");
+    }  
+  });
+};
+</script>
 <form name="input" action="/new" method="post">
-  Tweet This: <input type="text" name="tweet">	
-  <input type = "submit" value="Tweet">
+  <textarea name="word_count" id="word_count" cols="70" rows="6" style="font-family:geneva;font-size:18px;"></textarea>
+  <br/>
+  <input type = "submit" value="Say It" id="input_box">
 </form>
+<p/>
+<h2>You're working on a <span id="display_count">0</span> Character <span id="display_message"></span> Message</h2>
+
+<script type="text/javascript">$('#word_count').wordCount();</script>

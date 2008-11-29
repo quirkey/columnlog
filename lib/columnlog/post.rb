@@ -8,7 +8,7 @@ module Columnlog
       @body      = nil_if_blank? params[:body]
       @url       = nil_if_blank? params[:url]
       @author    = nil_if_blank? params[:author]
-      @posted_at = params[:posted_at] ? Chronic.parse(params[:posted_at]) : Time.now
+      @posted_at = params[:posted_at] ? Chronic.parse(params[:posted_at]) : Time.now.strftime("Printed on %m/%d/%Y at %I:%M%p")
       @column    = params[:column].blank? ? nil : Column[params[:column]]
       scan_for_shortcut
     end

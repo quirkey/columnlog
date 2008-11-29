@@ -1,5 +1,7 @@
 ---
 title: My Columns
+username: test
+password: test
 records:
   - id: 1
     name: twitter

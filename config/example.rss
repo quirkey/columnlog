@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/">
+  <channel>
+    <title>Delicious/A_Q</title>
+    <link>http://delicious.com/A_Q</link>
+    <description>bookmarks posted by A_Q</description>
+    <atom:link rel="self" type="application/rss+xml" href="http://feeds.delicious.com/v2/rss/A_Q?count=15"/>
+    <item>
+      <title>Zero to Production in 15 Minutes</title>
+      <pubDate>Sun, 30 Nov 2008 00:21:20 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/4d3a3d4b359c6b206fe49b78832944e4#A_Q</guid>
+      <link>http://blog.headius.com/2008/08/zero-to-production-in-15-minutes.html</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/4d3a3d4b359c6b206fe49b78832944e4</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/4d3a3d4b359c6b206fe49b78832944e4</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">jruby</category>
+      <category domain="http://delicious.com/A_Q/">rails</category>
+      <category domain="http://delicious.com/A_Q/">tutorial</category>
+      <category domain="http://delicious.com/A_Q/">deployment</category>
+    </item>
+    <item>
+      <title>project.tar.gz - Organize/Navigate projects of files (like IDE/buffer explorer) : vim online</title>
+      <pubDate>Sat, 29 Nov 2008 23:57:14 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/c20844995598b7079394431702daad0a#A_Q</guid>
+      <link>http://vim.sourceforge.net/scripts/script.php?script_id=69</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/c20844995598b7079394431702daad0a</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/c20844995598b7079394431702daad0a</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">textmate</category>
+      <category domain="http://delicious.com/A_Q/">vim</category>
+      <category domain="http://delicious.com/A_Q/">ruby</category>
+      <category domain="http://delicious.com/A_Q/">linux</category>
+    </item>
+    <item>
+      <title>mumbles-project.org » mumbles</title>
+      <pubDate>Sat, 29 Nov 2008 23:13:42 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/a5e81cc90c7ef7d1d85b84c766d9f2b7#A_Q</guid>
+      <link>http://www.mumbles-project.org/</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/a5e81cc90c7ef7d1d85b84c766d9f2b7</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/a5e81cc90c7ef7d1d85b84c766d9f2b7</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">growl</category>
+      <category domain="http://delicious.com/A_Q/">notification</category>
+      <category domain="http://delicious.com/A_Q/">ubuntu</category>
+      <category domain="http://delicious.com/A_Q/">software</category>
+    </item>
+    <item>
+      <title>GNOME Do in Launchpad</title>
+      <pubDate>Sat, 29 Nov 2008 22:55:42 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/424dedf8affa02e0366484ae1ef2bb5f#A_Q</guid>
+      <link>https://launchpad.net/do</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/424dedf8affa02e0366484ae1ef2bb5f</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/424dedf8affa02e0366484ae1ef2bb5f</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">software</category>
+      <category domain="http://delicious.com/A_Q/">linux</category>
+      <category domain="http://delicious.com/A_Q/">ubuntu</category>
+      <category domain="http://delicious.com/A_Q/">quicksilver</category>
+    </item>
+    <item>
+      <title>rails.vim - Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more : vim online</title>
+      <pubDate>Sat, 29 Nov 2008 22:11:10 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/5c78ff8608aa35f8e002aae00cc71876#A_Q</guid>
+      <link>http://www.vim.org/scripts/script.php?script_id=1567</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/5c78ff8608aa35f8e002aae00cc71876</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/5c78ff8608aa35f8e002aae00cc71876</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">rails</category>
+      <category domain="http://delicious.com/A_Q/">ruby</category>
+      <category domain="http://delicious.com/A_Q/">vim</category>
+      <category domain="http://delicious.com/A_Q/">linux</category>
+    </item>
+    <item>
+      <title>Vim for TextMate fans</title>
+      <pubDate>Sat, 29 Nov 2008 22:08:46 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/220d7f62e57c938cfa35e558123475a9#A_Q</guid>
+      <link>http://www.alexyoung.org/articles/show/12/vim_for_textmate_fans</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/220d7f62e57c938cfa35e558123475a9</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/220d7f62e57c938cfa35e558123475a9</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">vim</category>
+      <category domain="http://delicious.com/A_Q/">rails</category>
+      <category domain="http://delicious.com/A_Q/">ruby</category>
+      <category domain="http://delicious.com/A_Q/">ubuntu</category>
+      <category domain="http://delicious.com/A_Q/">linuz</category>
+      <category domain="http://delicious.com/A_Q/">textmate</category>
+    </item>
+    <item>
+      <title>Instantaneous touchpad 'tap' response [Archive] - Ubuntu Forums</title>
+      <pubDate>Sat, 29 Nov 2008 15:33:40 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/b9bd3ce9d052a08e8b44bb2731cc1821#A_Q</guid>
+      <link>http://ubuntuforums.org/archive/index.php/t-365683.html</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/b9bd3ce9d052a08e8b44bb2731cc1821</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/b9bd3ce9d052a08e8b44bb2731cc1821</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">ubuntu</category>
+      <category domain="http://delicious.com/A_Q/">mouse</category>
+      <category domain="http://delicious.com/A_Q/">reference</category>
+      <category domain="http://delicious.com/A_Q/">eeepc</category>
+    </item>
+    <item>
+      <title>eee-control</title>
+      <pubDate>Fri, 28 Nov 2008 17:45:30 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/4599924f72cdaeb260432ebaf192b591#A_Q</guid>
+      <link>http://greg.geekmind.org/eee-control/</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/4599924f72cdaeb260432ebaf192b591</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/4599924f72cdaeb260432ebaf192b591</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">eeepc</category>
+      <category domain="http://delicious.com/A_Q/">ubuntu</category>
+      <category domain="http://delicious.com/A_Q/">linux</category>
+      <category domain="http://delicious.com/A_Q/">software</category>
+    </item>
+    <item>
+      <title>Ubuntu Eee</title>
+      <pubDate>Fri, 28 Nov 2008 17:41:58 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/97ee1f8337b7355942ac9e9f1fd822a1#A_Q</guid>
+      <link>http://www.ubuntu-eee.com/</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/97ee1f8337b7355942ac9e9f1fd822a1</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/97ee1f8337b7355942ac9e9f1fd822a1</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">ubuntu</category>
+      <category domain="http://delicious.com/A_Q/">eeepc</category>
+      <category domain="http://delicious.com/A_Q/">linux</category>
+      <category domain="http://delicious.com/A_Q/">download</category>
+    </item>
+    <item>
+      <title>posting to wordpress via ruby and atompub « processi</title>
+      <pubDate>Fri, 28 Nov 2008 05:48:11 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/938c893a59cac7f2c5a80038d6b9afac#A_Q</guid>
+      <link>http://jmettraux.wordpress.com/2007/11/05/posting-to-wordpress-via-ruby-and-atompub/</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/938c893a59cac7f2c5a80038d6b9afac</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/938c893a59cac7f2c5a80038d6b9afac</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">atom</category>
+      <category domain="http://delicious.com/A_Q/">feed</category>
+      <category domain="http://delicious.com/A_Q/">wordpress</category>
+      <category domain="http://delicious.com/A_Q/">blog</category>
+      <category domain="http://delicious.com/A_Q/">api</category>
+      <category domain="http://delicious.com/A_Q/">ruby</category>
+    </item>
+    <item>
+      <title>» Sinatra Basic Authentication - Selectively Applied Gittr</title>
+      <pubDate>Wed, 26 Nov 2008 16:21:06 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/46af92ee32a15ce62776dcc39c2af746#A_Q</guid>
+      <link>http://www.gittr.com/index.php/archive/sinatra-basic-authentication-selectively-applied/</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/46af92ee32a15ce62776dcc39c2af746</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/46af92ee32a15ce62776dcc39c2af746</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">sinatra</category>
+      <category domain="http://delicious.com/A_Q/">authentication</category>
+      <category domain="http://delicious.com/A_Q/">ruby</category>
+    </item>
+    <item>
+      <title>all manner of distractions » Blog Archive » Processing, all grown up.</title>
+      <pubDate>Wed, 26 Nov 2008 16:02:39 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/e521d825633b8e356749d3e1f93154be#A_Q</guid>
+      <link>http://www.flight404.com/blog/?p=155</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/e521d825633b8e356749d3e1f93154be</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/e521d825633b8e356749d3e1f93154be</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">processing</category>
+      <category domain="http://delicious.com/A_Q/">art</category>
+      <category domain="http://delicious.com/A_Q/">gallery</category>
+    </item>
+    <item>
+      <title>http://copiousfreetime.rubyforge.org/launchy/</title>
+      <pubDate>Tue, 25 Nov 2008 05:26:54 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/525a9cd33491d9d23e46d382880420bd#A_Q</guid>
+      <link>http://copiousfreetime.rubyforge.org/launchy/</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/525a9cd33491d9d23e46d382880420bd</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/525a9cd33491d9d23e46d382880420bd</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">ruby</category>
+      <category domain="http://delicious.com/A_Q/">library</category>
+      <category domain="http://delicious.com/A_Q/">cli</category>
+    </item>
+    <item>
+      <title>Raphaël—JavaScript Library</title>
+      <pubDate>Tue, 25 Nov 2008 05:03:42 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/774ed2b4bc58b9e8d309df41ddca160d#A_Q</guid>
+      <link>http://raphaeljs.com/</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/774ed2b4bc58b9e8d309df41ddca160d</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/774ed2b4bc58b9e8d309df41ddca160d</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">code</category>
+      <category domain="http://delicious.com/A_Q/">library</category>
+      <category domain="http://delicious.com/A_Q/">javascript</category>
+      <category domain="http://delicious.com/A_Q/">canvas</category>
+    </item>
+    <item>
+      <title>Whitepaper: Seven Pillars of Pretty Code</title>
+      <pubDate>Tue, 25 Nov 2008 05:00:54 +0000</pubDate>
+      <guid isPermaLink="false">http://delicious.com/url/80b09b0bbb69f56b546cb5bdf04de3e3#A_Q</guid>
+      <link>http://www.perforce.com/perforce/papers/prettycode.html</link>
+      <dc:creator><![CDATA[A_Q]]></dc:creator>
+      <comments>http://delicious.com/url/80b09b0bbb69f56b546cb5bdf04de3e3</comments>
+      <wfw:commentRss>http://feeds.delicious.com/v2/rss/url/80b09b0bbb69f56b546cb5bdf04de3e3</wfw:commentRss>
+      <source url="http://feeds.delicious.com/v2/rss/A_Q">A_Q's bookmarks</source>
+      <category domain="http://delicious.com/A_Q/">code</category>
+      <category domain="http://delicious.com/A_Q/">design</category>
+      <category domain="http://delicious.com/A_Q/">article</category>
+      <category domain="http://delicious.com/A_Q/">development</category>
+    </item>
+  </channel>
+</rss>

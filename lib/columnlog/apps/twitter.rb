@@ -4,7 +4,7 @@ module Columnlog
       
       def post(content)
         content = content.is_a?(Post) ? content.body : content
-        app.post(content)
+        app.post(content, :source => 'columnlog')
       end
 
       def get(howmany = 10)

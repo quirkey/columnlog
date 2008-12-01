@@ -9,17 +9,21 @@ module Columnlog
       @body      = nil_if_blank? params[:body]
       @url       = nil_if_blank? params[:url]
       @author    = nil_if_blank? params[:author]
-      @posted_at = params[:posted_at] ? Chronic.parse(params[:posted_at]) : Time.now.strftime("Printed on %m/%d/%Y at %I:%M%p")
+      @posted_at = params[:posted_at]
       @column    = params[:column].blank? ? nil : Column[params[:column]]
       scan_for_shortcut
     end
     
     def save
-      column.post(self)
+      unless column.nil?
+        column.post(self)
+      else
+        false
+      end
     end
     
     def column
-      @column || raise("No column/app specified for post: #{self}")
+      @column #|| raise("No column/app specified for post: #{self}")
     end
     
     protected
@@ -31,7 +35,7 @@ module Columnlog
       return if @column || !@body
       if result = Column.shortcut_scan(body)
         @column, @body = result
-      end
+      end 
     end
   end
 end

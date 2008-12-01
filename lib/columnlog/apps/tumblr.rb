@@ -19,9 +19,12 @@ module Columnlog
       
       protected
       def to_post(tumble, other = {})
-        Post.new({:body => tumble["link-url"], 
-                  :time => tumble["created_at"],
-                  :url => tumble["url"]})
+        case tumble["type"]
+        when "link"
+          Post.new({:body => "<a href='#{tumble.children[1].content}'>#{tumble.children[0].content}</a>", 
+                    :posted_at => tumble["date-gmt"].to_time.strftime("%m/%d/%Y at %I:%M%p"),
+                    :url => tumble["url"]})
+        end
       end
 
     end

@@ -9,10 +9,9 @@ module Columnlog
         app.post(content)
       end
 
-      def get(gist_id)
-        unless gist_id.nil?
-          #open(@@gist_url % gist_id).read
-        end
+      def get(howmany=10)
+        doc = Nokogiri::HTML.parse(open("http://gist.github.com/mrb"))
+        doc.css('div.file').collect{|x| to_post(x.to_html) }
       end
 
       def app
@@ -20,11 +19,8 @@ module Columnlog
       end
       
       protected
-      def to_post(tumble, other = {})
-        #Post.new({:body => tumble["text"], 
-        #          :author => tumble["from_user"], 
-        #          :time => tweet["created_at"], 
-        #          :url => "http://twitter.com/#{tweet['from_user']}/status/#{tweet['id']}"}.merge(other))
+      def to_post(gist, other = {})
+        Post.new({:body => gist}.merge(other))
       end
       
     end

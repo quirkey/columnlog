@@ -16,6 +16,7 @@ helpers do
 end
 
 get '/' do
+  puts params
   erb :index
 end
 
@@ -27,6 +28,13 @@ end
 post '/new' do
   require_administrative_privileges
   @post = Columnlog::Post.new(:body => params['post_body'])
-  @post.save
-  redirect '/'
+  
+  if @post.save == true
+    params[:flash] = "<script type='text/javascript'>$(function() { jQuery.flash.success('You clicked a link and it worked!')});</script>"
+    erb :index
+  else
+    params[:flash] = "<script type='text/javascript'>$(function() { jQuery.flash.failure('Your post failed.')});</script>"
+    erb :new
+  end
+  
 end

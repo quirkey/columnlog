@@ -24,6 +24,7 @@ end
   apps/twitter 
   apps/tumblr
   apps/gist
+  apps/rss
 }.each do |file|
     require File.join(File.dirname(__FILE__), 'columnlog', file)
   end

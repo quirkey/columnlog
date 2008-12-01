@@ -1,13 +1,6 @@
-require 'rubygems'
-require 'activesupport'
-require 'yaml'
-require 'chronic'
-require 'static_model'
-require 'net/http'
-require 'open-uri'
-require 'twitter'
-require 'nokogiri'
-require 'xml'
+$: << File.dirname(__FILE__)
+
+require 'gems'
 
 module Columnlog
   
@@ -26,6 +19,6 @@ end
   apps/gist
   apps/rss
 }.each do |file|
-    require File.join(File.dirname(__FILE__), 'columnlog', file)
+    require File.join('columnlog', file)
   end
   

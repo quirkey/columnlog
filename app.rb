@@ -13,6 +13,12 @@ helpers do
     username == Columnlog::Column.class_attributes[:username] && 
     password == Columnlog::Column.class_attributes[:password]
   end
+  
+  def truncate_words(text, length = 30, truncate_string = "..." )
+    return if text.nil?
+    words = text.split
+    words.length > length ? words[0...length].join(" ") + truncate_string : text
+  end
 end
 
 get '/' do

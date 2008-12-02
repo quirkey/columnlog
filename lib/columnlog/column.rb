@@ -52,6 +52,10 @@ module Columnlog
         app.get(howmany)
       end
     end
+    
+    def updated_at
+      get && get.first ? get.first.posted_at : nil
+    end
 
     def cache
       @cache ||= ActiveSupport::Cache::MemoryStore.new#('tmp/columnlog')

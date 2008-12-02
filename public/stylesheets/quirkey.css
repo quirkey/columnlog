@@ -20,15 +20,21 @@ a:hover {
 #header {
 	background:#333;
 }
+#footer {
+	width: 100%;
+	text-align:right;
+	font-size: 11px;
+	margin: 20px 10px 20px 0px;
+}
 #columns {
 	width: 100%;
 	height: auto;
 	overflow: auto;
-	background: #BEBEBE;
+	background: #5F5F5F;
 }
 .column {
 	width: 300px;
-	margin-right: 5px;
+	margin: 0px;
 /*	margin-bottom: 30000px;*/
 	border-right: 2px solid: #333;
 	float:left;

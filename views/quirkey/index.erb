@@ -1,5 +1,5 @@
 <div id="columns">
-<% Columnlog::Column.all.each do |column| %>
+<% Columnlog::Column.all.reject {|c| c.updated_at.nil? }.sort_by {|c| c.updated_at }.reverse.each do |column| %>
 <div class="column" id="column_<%= column.app_type.underscore %>">
 	<h2><%= link_to column.title, column.url %></h2>
 	<div class="posts">

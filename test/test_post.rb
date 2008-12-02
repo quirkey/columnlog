@@ -23,6 +23,17 @@ class TestPost < Test::Unit::TestCase
         end
       end
 
+      context "with posted at as a time like string" do
+        setup do
+          @post = Post.new(:title => 'My Post', :body => 'My post body', :posted_at => Time.now.to_s)
+        end
+
+        should "convert posted at to time" do
+          assert @post.posted_at.is_a?(Time)
+        end
+      end
+      
+
       context "with a shortcut in the body" do
         setup do
           @post = Post.new(:body => '*tw tweeting my life away')

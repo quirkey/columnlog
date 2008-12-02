@@ -37,13 +37,15 @@ module Columnlog
       def default_theme
         'default'
       end
-
+      
+      def cache_for
+        class_attributes[:cache_for] || 300
+      end
     end
 
     delegate :post, :get, :to => :app
 
     def cache_key(with = "")
-      cache_for = self.cache_for.blank? ? 5.minutes : self.cache_for
       "#{name}_#{with}/#{Time.now.to_i / cache_for.to_i}"
     end
     

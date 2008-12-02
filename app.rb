@@ -4,7 +4,7 @@ require File.join(File.dirname(__FILE__), 'vendor', 'sinatra_helpers', 'authoriz
 
 
 set :public, 'public'
-set :views, "views"#"/#{Columnlog::Column.theme}"
+set :views, "views"
 set :realm, 'Columnlog'
 
 helpers do
@@ -16,9 +16,14 @@ helpers do
   end
   
   def truncate_words(text, length = 30, truncate_string = "..." )
-    return if text.nil?
+    return '' if text.nil?
     words = text.split
     words.length > length ? words[0...length].join(" ") + truncate_string : text
+  end
+  
+  def truncate(text, length = 30, truncate_string = '...')
+    return '' if text.blank?
+    text.length > length ? text[0..length] + truncate_string : text
   end
   
   def theme

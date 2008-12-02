@@ -4,14 +4,14 @@
     <title>Columnlog</title>
     <script src="jQuery.js" type="text/javascript" ></script>  
     <script src="jQuery.flash.js" type="text/javascript" ></script>
-    <link href="columnlog.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="/columnlog.css" media="screen" rel="stylesheet" type="text/css" >
   </head>
   <body>
-	<div id = "header"><h3><a href="/">Keepin it Columnar</a></h3></div>
+	<div id="header"><h3><a href="/">Keepin it Columnar</a></h3></div>
     <div id = "page">
 	  <%= params[:flash] %>
 	  <div id = "flash"></div>
-      <%=yield%>
+      <%= yield %>
     </div>
     <div id = "footer">by <a href="http://www.github.com/mrb">mrb</a> and <a href="http://www.github.com/quirkey">quirkey</a></div>
   </body>

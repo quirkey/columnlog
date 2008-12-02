@@ -3,7 +3,7 @@
     <h1><%= column.name.capitalize %></h1>
     <br/>
       <div id="files">
-      	<% column.app.get.each do |post| %>
+      	<% column.get.each do |post| %>
       	  <b><%= post.body %></b><br/>
       	  <i><%= post.posted_at %></i> - <a href="<%=post.url%>">url</a>
       	  <p/>

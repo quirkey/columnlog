@@ -9,7 +9,7 @@ module Columnlog
 
       def get(howmany = 10)
         out = []
-        doc = Nokogiri::HTML.parse(open("http://#{settings["username"]}.tumblr.com/api/read")).xpath('//post').collect{|x| out << to_post(x)}
+        doc = Nokogiri::XML.parse(open("http://#{settings["username"]}.tumblr.com/api/read")).xpath('//post').collect{|x| out << to_post(x)}
         out
       end
 

@@ -30,6 +30,14 @@ module Columnlog
         end; nil
       end
 
+      def theme
+        self.class_attributes['theme'] || default_theme
+      end
+
+      def default_theme
+        'default'
+      end
+
     end
 
     delegate :post, :get, :to => :app

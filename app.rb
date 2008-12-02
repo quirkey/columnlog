@@ -26,6 +26,11 @@ helpers do
     text.length > length ? text[0..length] + truncate_string : text
   end
   
+  def link_to(text, link = nil)
+    link ||= text
+    "<a href=\"#{link}\">#{text}</a>"
+  end
+  
   def theme
     Columnlog::Column.theme
   end

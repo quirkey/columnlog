@@ -1,6 +1,6 @@
 <div id="columns">
 <% Columnlog::Column.all.each do |column| %>
-<div class="column" id="column_<%= column.name %>">
+<div class="column" id="column_<%= column.app_type.underscore %>">
 	<h2><%= link_to column.title, column.url %></h2>
 	<div class="posts">
 		<% column.get.each do |post| %>
@@ -13,4 +13,5 @@
 	</div>
 </div>	
 <% end %>
+<div class="clear"></div>
 </div>

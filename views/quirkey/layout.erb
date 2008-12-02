@@ -13,7 +13,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><%= Columnlog::Column.title %></h1>
+			<h1><%= link_to Columnlog::Column.title, '/' %></h1>
 		</div>
 	<%= yield %>
 	<div id="footer">

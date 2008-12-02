@@ -1,16 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+/******************************************************
+ *	theme(quirkey).css									*
+\*****************************************************/
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+body {
+	margin: 0px;
+	background: #2D2F3D;
+	font-family: Helvetica, Arial, sans-serif;	
+	color: #FFF;
+	font-size: 14px;
+}
+a:link, a:visited {
+	color:#B6D7F0;
+	text-decoration:none;
+}
+a:hover {
+	color:#ECE2E8;
+}
 
-	<title>quirkey</title>
-	
-</head>
+#header {
+	background:#333;
+}
+#columns {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	background: #BEBEBE;
+}
+.column {
+	width: 300px;
+	margin-right: 5px;
+/*	margin-bottom: 30000px;*/
+	border-right: 2px solid: #333;
+	float:left;
+	height: 100%;
+}
+.post {
+	padding: 0px 10px 20px;
+	line-height: 140%;
+}
+.post h3 {
+	font-size: 16px;
+	color:#B6B6B6;
+}
+#column_twitter .post_body {
+	font-size: 16px;
+}
+.post .meta_info {
+	font-size: 11px;
+	color: #E1E1E1;
+}
 
-<body>
+.clear {
+	font-size: 1px;
+	line-height: 0px;
+	clear:both;
+}
 
-
-</body>
-</html>
+#column_twitter {
+	background:#0C2A47;
+}
+#column_twitter h2 {
+	background: #B6D7F0;
+	display:block;
+	padding: 10px 0px;
+	margin: 0px 0px 10px 0px;
+}
+#column_twitter h2 a {
+	color: #0C2A47;
+}
+#column_rss {
+	background:#22455E;
+}
+#column_tumblr {
+	background: #13323A;
+}

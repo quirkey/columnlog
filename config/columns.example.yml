@@ -2,6 +2,7 @@
 title: My Columns
 username: test
 password: test
+cache_for: 300
 records:
   - id: 1
     name: twitter

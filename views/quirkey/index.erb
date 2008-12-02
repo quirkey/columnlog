@@ -1,6 +1,6 @@
 <div id="columns">
 <% Columnlog::Column.all.reject {|c| c.updated_at.nil? }.sort_by {|c| c.updated_at }.reverse.each do |column| %>
-<div class="column" id="column_<%= column.app_type.underscore %>">
+<div class="column" id="column_<%= column.app_type.underscore %>" style="width: <%= 100 / Columnlog::Column.count %>%;">
 	<h2><%= link_to column.title, column.url %></h2>
 	<div class="posts">
 		<% column.get.each do |post| %>

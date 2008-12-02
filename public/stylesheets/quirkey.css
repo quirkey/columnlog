@@ -18,7 +18,17 @@ a:hover {
 }
 
 #header {
-	background:#333;
+	font-family: Georgia, Times, serif;	
+	border-bottom: 10px solid #222833;
+}
+#header h1 {
+	font-weight:normal;
+	font-size: 50px;
+	margin: -5px 0px 0px 10px;
+	height: 45px;
+}
+#header h1 a {
+	color: #F5F0E2;
 }
 #footer {
 	width: 100%;
@@ -33,7 +43,7 @@ a:hover {
 	background: #5F5F5F;
 }
 .column {
-	width: 300px;
+	min-width: 300px;
 	margin: 0px;
 /*	margin-bottom: 30000px;*/
 	border-right: 2px solid: #333;
@@ -61,22 +71,40 @@ a:hover {
 	line-height: 0px;
 	clear:both;
 }
-
+.column h2 {
+	padding: 0px 10px;
+	margin: -5px 0px 10px 0px;	
+	font-size: 40px;
+	height: 30px;
+/*	text-shadow: #333 2px 2px 5px;*/
+}
 #column_twitter {
 	background:#0C2A47;
 }
 #column_twitter h2 {
 	background: #B6D7F0;
 	display:block;
-	padding: 10px 0px;
-	margin: 0px 0px 10px 0px;
 }
-#column_twitter h2 a {
+#column_twitter h2 a:link, #column_twitter h2 a:visited {
 	color: #0C2A47;
 }
 #column_rss {
 	background:#22455E;
 }
+#column_rss h2 {
+	background: #B6D7F0;
+	display:block;
+}
+#column_rss h2 a:link, #column_rss h2 a:visited {
+	color: #22455E;
+}
 #column_tumblr {
 	background: #13323A;
+}
+#column_tumblr h2 {
+	background: #B6D7F0;
+	display:block;
+}
+#column_tumblr h2 a:link, #column_tumblr h2 a:visited {
+	color: #13323A;
 }

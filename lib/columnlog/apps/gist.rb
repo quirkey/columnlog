@@ -9,7 +9,7 @@ module Columnlog
         app.post(content)
       end
 
-      def get(howmany=10)
+      def get(how_many = nil)
         doc = Nokogiri::HTML.parse(open("http://gist.github.com/mrb"))
         doc.css('div.file').collect{|x| to_post(x.to_html) }
       end

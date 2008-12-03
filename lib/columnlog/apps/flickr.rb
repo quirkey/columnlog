@@ -7,8 +7,10 @@ module Columnlog
       #   app.post(content, :source => 'columnlog')
       # end
 
-      def get(howmany = 10)
-        app.photos('per_page' => howmany, 'extras' => 'date_taken').collect {|p| to_post(p) }
+      def get(how_many = nil)
+        super
+        posts = app.photos('per_page' => how_many, 'extras' => 'date_taken').collect {|p| to_post(p) }
+        posts.first(how_many)
       end
 
       def app

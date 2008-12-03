@@ -7,12 +7,13 @@ module Columnlog
         app.post(content, :source => 'columnlog')
       end
 
-      def get(howmany = 10)
+      def get(how_many = nil)
+        super
         posts = []
         ::Twitter::Search.new.from(settings.username).each do |post|
           posts << to_post(post)
         end
-        posts
+        posts.first(how_many)
       end
 
       def app

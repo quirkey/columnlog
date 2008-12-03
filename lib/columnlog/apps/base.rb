@@ -9,7 +9,9 @@ module Columnlog
       end
       
       def post(params); end
-      def get(howmany = 10); end
+      def get(how_many = nil)
+        how_many ||= settings.how_many
+      end
       
       def to_post(element, other = {})
         Post.new(other)

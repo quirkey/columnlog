@@ -7,10 +7,11 @@ module Columnlog
         app.post(content)
       end
 
-      def get(howmany = 10)
+      def get(how_many = nil)
+        super
         out = []
         doc = Nokogiri::XML.parse(open("http://#{settings["username"]}.tumblr.com/api/read")).xpath('//post').collect{|x| out << to_post(x)}
-        out
+        out.first(how_many)
       end
 
       def app

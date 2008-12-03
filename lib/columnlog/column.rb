@@ -53,10 +53,15 @@ module Columnlog
       @attributes['cache_for'] || self.class.cache_for
     end
         
-    def get(howmany = 10)
-      cache.fetch(cache_key(howmany)) do
-        app.get(howmany)
+    def get(how_many = nil)
+      how_many ||= self.how_many
+      cache.fetch(cache_key(how_many)) do
+        app.get(how_many)
       end
+    end
+    
+    def how_many
+      @attributes['how_many'] || self.class.class_attributes['how_many'] || 10
     end
     
     def updated_at
@@ -68,7 +73,7 @@ module Columnlog
     end
 
     def settings
-      @settings ||= SuperHash.new(@attributes[:settings])
+      @settings ||= SuperHash.new({:how_many => how_many}.merge(@attributes[:settings]))
     end
 
     def app

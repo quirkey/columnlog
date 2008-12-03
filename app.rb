@@ -14,23 +14,7 @@ helpers do
     username == Columnlog::Column.class_attributes[:username] && 
     password == Columnlog::Column.class_attributes[:password]
   end
-  
-  def truncate_words(text, length = 30, truncate_string = "..." )
-    return '' if text.nil?
-    words = text.split
-    words.length > length ? words[0...length].join(" ") + truncate_string : text
-  end
-  
-  def truncate(text, length = 30, truncate_string = '...')
-    return '' if text.blank?
-    text.length > length ? text[0..length] + truncate_string : text
-  end
-  
-  def link_to(text, link = nil)
-    link ||= text
-    "<a href=\"#{link}\">#{text}</a>"
-  end
-  
+    
   def theme
     Columnlog::Column.theme
   end

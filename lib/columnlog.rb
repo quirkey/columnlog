@@ -11,6 +11,8 @@ end
 
 %w{
   super_hash 
+  text_helper
+  themes
   post
   column
   apps/base

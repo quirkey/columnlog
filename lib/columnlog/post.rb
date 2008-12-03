@@ -11,6 +11,7 @@ module Columnlog
       @author    = nil_if_blank? params[:author]
       @posted_at = params[:posted_at] ? (Chronic.parse(params[:posted_at]) || Time.parse(params[:posted_at]) || params[:posted_at]) : nil
       @column    = params[:column].blank? ? nil : Column[params[:column]]
+      @body      = Columnlog::TextHelper.link_urls_in(@body)
       scan_for_shortcut
     end
     

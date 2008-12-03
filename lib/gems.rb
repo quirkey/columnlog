@@ -31,4 +31,7 @@ gem_dependency 'twitter'
 gem_dependency 'nokogiri'
 gem_dependency 'xml'
 
+gem_dependency 'vendor/flickr/lib/flickr'
+
 missing_gems?
+

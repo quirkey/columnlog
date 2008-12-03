@@ -18,6 +18,7 @@ end
   apps/tumblr
   apps/gist
   apps/rss
+  apps/last_fm
 }.each do |file|
     require File.join('columnlog', file)
   end

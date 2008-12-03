@@ -46,24 +46,26 @@ a:hover {
 	min-width: 300px;
 	margin: 0px;
 /*	margin-bottom: 30000px;*/
-	border-right: 2px solid: #333;
+	border-top: 1px solid #13171E;
+	border-right: 2px solid #666;
 	float:left;
 	height: 100%;
 }
 .post {
-	padding: 0px 10px 20px;
+	padding: 10px;
 	line-height: 140%;
+	border-bottom: 1px solid #666;
 }
 .post h3 {
 	font-size: 16px;
+	line-height: 140%;
+	padding: 0px;
+	margin: 0px;
 	color:#B6B6B6;
-}
-#column_twitter .post_body {
-	font-size: 16px;
 }
 .post .meta_info {
 	font-size: 11px;
-	color: #E1E1E1;
+	color: #9E9E9E;
 }
 
 .clear {
@@ -73,7 +75,7 @@ a:hover {
 }
 .column h2 {
 	padding: 0px 10px;
-	margin: -5px 0px 10px 0px;	
+	margin: -5px 0px 0px 0px;	
 	font-size: 40px;
 	height: 30px;
 /*	text-shadow: #333 2px 2px 5px;*/
@@ -87,6 +89,10 @@ a:hover {
 }
 #column_twitter h2 a:link, #column_twitter h2 a:visited {
 	color: #0C2A47;
+}
+#column_twitter .post_body {
+	font-size: 20px;
+	font-family: Georgia, Times, serif;
 }
 #column_rss {
 	background:#22455E;
@@ -107,4 +113,14 @@ a:hover {
 }
 #column_tumblr h2 a:link, #column_tumblr h2 a:visited {
 	color: #13323A;
+}
+#column_last_fm {
+	background: #51373D;
+}
+#column_last_fm h2 {
+	background: #B6D7F0;
+	display:block;
+}
+#column_last_fm h2 a:link, #column_last_fm h2 a:visited {
+	color: #51373D;
 }

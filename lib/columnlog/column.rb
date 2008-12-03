@@ -49,6 +49,10 @@ module Columnlog
       "#{name}_#{with}/#{Time.now.to_i / cache_for.to_i}"
     end
     
+    def cache_for
+      @attributes['cache_for'] || self.class.cache_for
+    end
+        
     def get(howmany = 10)
       cache.fetch(cache_key(howmany)) do
         app.get(howmany)

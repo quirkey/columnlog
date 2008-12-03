@@ -19,7 +19,7 @@ module Columnlog
 
       protected
       def to_post(photo, other = {})
-        Post.new({:body => "<a href=\"#{photo.url}\"><img src=\"#{photo.source('Small')}\" alt=\"#{photo.title}\" /></a>", 
+        Post.new({:body => "<a href=\"#{photo.url}\"><img src=\"#{photo.source(settings[:size] || 'Small')}\" alt=\"#{photo.title}\" /></a>", 
                   :posted_at => photo['datetaken'], 
                   :url => "#{photo.url}"}.merge(other))
       end

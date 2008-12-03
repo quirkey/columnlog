@@ -34,7 +34,10 @@ a:hover {
 	width: 100%;
 	text-align:right;
 	font-size: 11px;
-	margin: 20px 10px 20px 0px;
+	margin: 20px 0px;
+}
+#footer p {
+	padding: 0px 10px;
 }
 #columns {
 	width: 100%;
@@ -133,4 +136,8 @@ a:hover {
 }
 .column_flickr h2 a:link, .column_flickr h2 a:visited {
 	color: #141B22;
+}
+.column_flickr img {
+	float:left;
+	margin: 0px 10px 10px 0px;
 }

@@ -9,6 +9,7 @@
 			<% if post.title %><h3><%= link_to post.title, post.url %></h3><% end %>
 			<% if post.body %><div class="post_body"><%= post.body %></div><% end %>
 			<div class="meta_info"><%= post.posted_at.strftime("%B, %e %Y at %I:%M%p") %><% if post.author %> by <%= post.author %><% end %><% if post.url %>&nbsp;<%= link_to "&raquo;", post.url %><% end %></div>
+			<div class="clear"></div>
 		</div>
 		<% end %>
 	</div>

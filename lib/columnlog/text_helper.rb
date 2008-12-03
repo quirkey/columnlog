@@ -42,11 +42,11 @@ module Columnlog
       end
       
       def image_tag(img_url)
-        %{<a href="#{img_url}" target="_blank"><img src="#{img_url}" alt="User Posted Image" width="480" /></a>}
+        %{ <a href="#{img_url}" target="_blank"><img src="#{img_url}" alt="User Posted Image" width="480" /></a>}
       end
       
       def link(url)
-        %{<a href="#{url}" target="_blank">#{url}</a>}
+        %{ <a href="#{url}" target="_blank">#{url}</a>}
       end
       
     end

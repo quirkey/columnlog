@@ -9,8 +9,8 @@ module Columnlog
 
       def get(howmany = 10)
         out = []
-        doc = app.xpath('/rss/channel/item').collect{|i| out << to_post(i) }
-        out
+        doc = app.xpath('/rss/channel/item').collect {|i| out << to_post(i) }
+        out.first(howmany)
       end
 
       def app

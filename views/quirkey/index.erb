@@ -1,7 +1,7 @@
 <div id="columns">
 <% columns = Columnlog::Column.all.reject {|c| c.updated_at.nil? } %>
 <% columns.sort_by {|c| c.updated_at }.reverse.each do |column| %>
-<div class="column" id="column_<%= column.app_type.underscore %>" style="width: <%= 100 / columns.length %>%;">
+<div class="column column_<%= column.app_type.underscore %>" style="width: <%= 99.4 / columns.length %>%;">
 	<h2><%= link_to column.title, column.url %></h2>
 	<div class="posts">
 		<% column.get.each do |post| %>

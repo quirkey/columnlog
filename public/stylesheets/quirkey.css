@@ -80,47 +80,57 @@ a:hover {
 	height: 30px;
 /*	text-shadow: #333 2px 2px 5px;*/
 }
-#column_twitter {
+.column_twitter {
 	background:#0C2A47;
 }
-#column_twitter h2 {
+.column_twitter h2 {
 	background: #B6D7F0;
 	display:block;
 }
-#column_twitter h2 a:link, #column_twitter h2 a:visited {
+.column_twitter h2 a:link, .column_twitter h2 a:visited {
 	color: #0C2A47;
 }
-#column_twitter .post_body {
+.column_twitter .post_body {
 	font-size: 20px;
 	font-family: Georgia, Times, serif;
 }
-#column_rss {
+.column_rss {
 	background:#22455E;
 }
-#column_rss h2 {
+.column_rss h2 {
 	background: #B6D7F0;
 	display:block;
 }
-#column_rss h2 a:link, #column_rss h2 a:visited {
+.column_rss h2 a:link, .column_rss h2 a:visited {
 	color: #22455E;
 }
-#column_tumblr {
+.column_tumblr {
 	background: #13323A;
 }
-#column_tumblr h2 {
+.column_tumblr h2 {
 	background: #B6D7F0;
 	display:block;
 }
-#column_tumblr h2 a:link, #column_tumblr h2 a:visited {
+.column_tumblr h2 a:link, .column_tumblr h2 a:visited {
 	color: #13323A;
 }
-#column_last_fm {
+.column_last_fm {
 	background: #51373D;
 }
-#column_last_fm h2 {
+.column_last_fm h2 {
 	background: #B6D7F0;
 	display:block;
 }
-#column_last_fm h2 a:link, #column_last_fm h2 a:visited {
+.column_last_fm h2 a:link, .column_last_fm h2 a:visited {
 	color: #51373D;
+}
+.column_flickr {
+	background: #141B22;
+}
+.column_flickr h2 {
+	background: #B6D7F0;
+	display:block;
+}
+.column_flickr h2 a:link, .column_flickr h2 a:visited {
+	color: #141B22;
 }

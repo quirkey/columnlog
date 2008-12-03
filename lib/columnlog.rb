@@ -19,6 +19,7 @@ end
   apps/gist
   apps/rss
   apps/last_fm
+  apps/flickr
 }.each do |file|
     require File.join('columnlog', file)
   end

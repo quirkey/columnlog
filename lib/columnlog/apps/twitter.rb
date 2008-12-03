@@ -27,7 +27,7 @@ module Columnlog
       def to_post(tweet, other = {})
         Post.new({:body => tweet["text"], 
                   :author => tweet["from_user"], 
-                  :posted_at => tweet["created_at"].to_time.strftime("%m/%d/%Y at %I:%M%p"), 
+                  :posted_at => tweet["created_at"], 
                   :url => "http://twitter.com/#{tweet['from_user']}/status/#{tweet['id']}"}.merge(other))
       end
     end

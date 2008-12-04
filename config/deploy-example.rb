@@ -1,6 +1,6 @@
 set :application, "columnlog"
 set :scm, :git
-set :repository, "git@github.com:quirkey/columnlog.git"
+set :repository, "git://github.com/quirkey/columnlog.git"
 set :branch, 'master'
 set :git_enable_submodules, 1
 set :keep_releases, 3

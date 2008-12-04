@@ -29,7 +29,6 @@ gem_dependency 'net/http'
 gem_dependency 'open-uri'
 gem_dependency 'twitter'
 gem_dependency 'nokogiri'
-gem_dependency 'xml'
 
 gem_dependency 'vendor/flickr/lib/flickr'
 

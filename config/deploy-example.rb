@@ -22,3 +22,14 @@ namespace :monit do
     sudo "monit restart -g #{monit_group} all"
   end
 end
+
+namespace :columnlog do
+  
+  task :link_columns do
+    run "mkdir -p #{shared_path}/data"
+    run "rm -f #{current_path}/columns.yml && ln -s #{shared_path}/data/columns.yml #{current_path}/config/columns.yml"
+  end
+  
+end
+
+after "deploy:update_code", "columnlog:link_columns"

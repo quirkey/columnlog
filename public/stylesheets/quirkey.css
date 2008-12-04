@@ -39,11 +39,15 @@ a:hover {
 #footer p {
 	padding: 0px 10px;
 }
-#columns {
+#main {
 	width: 100%;
 	height: auto;
-	overflow: auto;
 	background: #5F5F5F;
+	overflow: scroll;
+}
+#columns {
+/*	white-space: nowrap;*/
+	width: auto;
 }
 .column {
 	min-width: 300px;

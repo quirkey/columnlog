@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title><%= Columnlog::Column.title %></title>
-	
+
 	<link rel="stylesheet" href="/stylesheets/<%= theme %>.css" type="text/css" media="all" title="default" charset="utf-8" />
 </head>
 
@@ -15,10 +15,12 @@
 		<div id="header">
 			<h1><%= link_to Columnlog::Column.title, '/' %></h1>
 		</div>
-	<%= yield %>
-	<div id="footer">
-		<p>powered by <%= link_to "columnlog", 'http://github.com/quirkey/columnlog' %> : by <a href="http://www.github.com/mrb">mrb</a> and <a href="http://www.github.com/quirkey">quirkey</a></div></p>
-	</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+		<div id="footer">
+			<p>powered by <%= link_to "columnlog", 'http://github.com/quirkey/columnlog' %> : by <a href="http://www.github.com/mrb">mrb</a> and <a href="http://www.github.com/quirkey">quirkey</a></div></p>
+		</div>
 	</div>
 </body>
 </html>

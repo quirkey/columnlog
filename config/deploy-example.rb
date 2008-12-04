@@ -23,11 +23,12 @@ namespace :monit do
   end
 end
 
+
 namespace :columnlog do
   
   task :link_columns do
     run "mkdir -p #{shared_path}/data"
-    run "rm -f #{current_path}/columns.yml && ln -s #{shared_path}/data/columns.yml #{current_path}/config/columns.yml"
+    run "ln -nfs #{shared_path}/data/columns.yml #{release_path}/config/columns.yml"
   end
   
 end

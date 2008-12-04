@@ -1,3 +1,4 @@
 config/credentials.yml
 config/columns.yml
+config/deploy.rb
 tmp

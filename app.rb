@@ -2,8 +2,7 @@ require File.join(File.dirname(__FILE__), 'lib', 'columnlog.rb')
 require File.join(File.dirname(__FILE__), 'vendor', 'sinatra', 'lib', 'sinatra.rb')
 require File.join(File.dirname(__FILE__), 'vendor', 'sinatra_helpers', 'authorization.rb')
 
-set :public, 'public'
-set :views, "views"
+set :public, Columnlog::Themes.public_path
 set :realm, 'Columnlog'
 
 helpers do

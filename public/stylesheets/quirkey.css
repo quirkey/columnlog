@@ -1,0 +1,143 @@
+/******************************************************
+ *	theme(quirkey).css									*
+\*****************************************************/
+
+body {
+	margin: 0px;
+	background: #2D2F3D;
+	font-family: Helvetica, Arial, sans-serif;	
+	color: #FFF;
+	font-size: 14px;
+}
+a:link, a:visited {
+	color:#B6D7F0;
+	text-decoration:none;
+}
+a:hover {
+	color:#ECE2E8;
+}
+
+#header {
+	font-family: Georgia, Times, serif;	
+	border-bottom: 10px solid #222833;
+}
+#header h1 {
+	font-weight:normal;
+	font-size: 50px;
+	margin: -5px 0px 0px 10px;
+	height: 45px;
+}
+#header h1 a {
+	color: #F5F0E2;
+}
+#footer {
+	width: 100%;
+	text-align:right;
+	font-size: 11px;
+	margin: 20px 0px;
+}
+#footer p {
+	padding: 0px 10px;
+}
+#columns {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	background: #5F5F5F;
+}
+.column {
+	min-width: 300px;
+	margin: 0px;
+/*	margin-bottom: 30000px;*/
+	border-top: 1px solid #13171E;
+	border-right: 2px solid #666;
+	float:left;
+	height: 100%;
+}
+.post {
+	padding: 10px;
+	line-height: 170%;
+	border-bottom: 1px solid #666;
+}
+.post h3 {
+	font-size: 16px;
+	line-height: 140%;
+	padding: 0px;
+	margin: 0px;
+	color:#B6B6B6;
+}
+.post .meta_info {
+	font-size: 11px;
+	color: #9E9E9E;
+}
+
+.clear {
+	font-size: 1px;
+	line-height: 0px;
+	clear:both;
+}
+.column h2 {
+	padding: 0px 10px;
+	margin: -5px 0px 0px 0px;	
+	font-size: 40px;
+	height: 30px;
+/*	text-shadow: #333 2px 2px 5px;*/
+}
+.column_twitter {
+	background:#0C2A47;
+}
+.column_twitter h2 {
+	background: #B6D7F0;
+	display:block;
+}
+.column_twitter h2 a:link, .column_twitter h2 a:visited {
+	color: #0C2A47;
+}
+.column_twitter .post_body {
+	font-size: 20px;
+	font-family: Georgia, Times, serif;
+}
+.column_rss {
+	background:#22455E;
+}
+.column_rss h2 {
+	background: #B6D7F0;
+	display:block;
+}
+.column_rss h2 a:link, .column_rss h2 a:visited {
+	color: #22455E;
+}
+.column_tumblr {
+	background: #13323A;
+}
+.column_tumblr h2 {
+	background: #B6D7F0;
+	display:block;
+}
+.column_tumblr h2 a:link, .column_tumblr h2 a:visited {
+	color: #13323A;
+}
+.column_last_fm {
+	background: #51373D;
+}
+.column_last_fm h2 {
+	background: #B6D7F0;
+	display:block;
+}
+.column_last_fm h2 a:link, .column_last_fm h2 a:visited {
+	color: #51373D;
+}
+.column_flickr {
+	background: #141B22;
+}
+.column_flickr h2 {
+	background: #B6D7F0;
+	display:block;
+}
+.column_flickr h2 a:link, .column_flickr h2 a:visited {
+	color: #141B22;
+}
+.column_flickr img {
+	float:left;
+	margin: 0px 10px 10px 0px;
+}

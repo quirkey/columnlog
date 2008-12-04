@@ -7,10 +7,11 @@ module Columnlog
       #   app.post(content)
       # end
 
-      def get(howmany = 10)
+      def get(how_many = nil)
+        super
         out = []
-        doc = app.xpath('/rss/channel/item').collect{|i| out << to_post(i) }
-        out
+        doc = app.xpath('/rss/channel/item').collect {|i| out << to_post(i) }
+        out.first(how_many)
       end
 
       def app

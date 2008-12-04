@@ -11,6 +11,8 @@ end
 
 %w{
   super_hash 
+  text_helper
+  themes
   post
   column
   apps/base
@@ -18,6 +20,8 @@ end
   apps/tumblr
   apps/gist
   apps/rss
+  apps/last_fm
+  apps/flickr
 }.each do |file|
     require File.join('columnlog', file)
   end

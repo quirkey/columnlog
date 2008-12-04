@@ -33,7 +33,6 @@ class TestPost < Test::Unit::TestCase
         end
       end
       
-
       context "with a shortcut in the body" do
         setup do
           @post = Post.new(:body => '*tw tweeting my life away')

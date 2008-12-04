@@ -2,17 +2,22 @@
 title: My Columns
 username: test
 password: test
+cache_for: 300
 records:
   - id: 1
     name: twitter
+    title: Twitter
     app_type: Twitter
+    url: http://twitter.com/test
     settings:
       username: test
       password: test
     shortcut: '*tw'
   - id: 2
     name: tumblr
+    title: Tumblr
     app_type: Tumblr
+    url: http://test.tumblr.com
     settings:
       username: test
       password: test

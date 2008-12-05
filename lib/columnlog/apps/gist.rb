@@ -5,12 +5,11 @@ module Columnlog
       @@gist_url = 'http://gist.github.com/%s.txt'
       
       def post(content)
-        content = content.is_a?(Post) ? content.body : content
-        app.post(content)
       end
 
       def get(how_many = nil)
-        doc = Nokogiri::HTML.parse(open("http://gist.github.com/mrb"))
+        super
+        doc = Nokogiri::HTML(open("http://gist.github.com/mrb"))
         doc.css('div.file').collect{|x| to_post(x.to_html) }
       end
 

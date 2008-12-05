@@ -10,21 +10,23 @@ module Columnlog
       #   app.post(content)
       # end
 
-      def get(how_many = 10)
+      def get(how_many = nil)
         super
         out = app.collect {|i| to_post(i) }
         out.first(how_many)
       end
 
       def app
-        Columnlog::SimpleText.set_data_file settings.data_file
+        data_root = File.join(Columnlog.root, 'data/')
+        Columnlog::SimpleText.set_data_file data_root+settings.data_file
         Columnlog::SimpleText.all
       end
       
       protected
       def to_post(item, other = {})
         Post.new({:title =>item.title,
-                  :body => item.body})
+                  :body => item.body,
+                  :posted_at => item.posted_at})
       end
 
     end

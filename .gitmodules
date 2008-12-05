@@ -4,3 +4,6 @@
 [submodule "vendor/flickr"]
 	path = vendor/flickr
 	url = git://github.com/ctagg/flickr.git
+[submodule "vendor/static_model"]
+	path = vendor/static_model
+	url = git://github.com/quirkey/static_model.git

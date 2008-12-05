@@ -1,5 +1,7 @@
 ---    
-- title: Link #1
-  body: http://www.google.com
-- title: Link #2
-  body: http://www.nytimes.com
+- title: News 12/5/08
+  body: Not too much news today! Not too much news today! Not too much news today! Not too much news today!
+  posted_at: Fri Dec 05 15:32:10 -0500 2008
+- title: News 12/4/08
+  body: Not too much news today!
+  posted_at: Fri Dec 04 12:21:30 -0500 2008

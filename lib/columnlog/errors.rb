@@ -3,6 +3,5 @@ module Columnlog
     
     class Error < Exception; end
     class UnauthorizedApp < Error; end
-    
   end
 end

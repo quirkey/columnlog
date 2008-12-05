@@ -1,4 +1,7 @@
 module Columnlog
+  class SimpleText < StaticModel::Base
+  end
+  
   module Apps
     class Text < Base
 
@@ -9,20 +12,19 @@ module Columnlog
 
       def get(how_many = 10)
         super
-        out = []
-        app.collect{|i| out << to_post(i)}
+        out = app.collect {|i| to_post(i) }
         out.first(how_many)
       end
 
       def app
-        file = eval(settings.data_file)
-        YAML.load_file(file).values
+        Columnlog::SimpleText.set_data_file settings.data_file
+        Columnlog::SimpleText.all
       end
       
       protected
       def to_post(item, other = {})
-        Post.new({:title =>item["title"],
-                  :body => item["body"]})
+        Post.new({:title =>item.title,
+                  :body => item.body})
       end
 
     end

@@ -11,7 +11,7 @@ end
 
 def missing_gems?
   if $missing_gems && !$missing_gems.empty?
-    puts "Sorry, your missing some gems to run columnlog:"
+    puts "Sorry, you're missing some gems to run columnlog:"
     $missing_gems.each do |gem_name|
       puts gem_name
     end

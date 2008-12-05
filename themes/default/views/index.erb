@@ -1,14 +1,19 @@
-<% Columnlog::Column.all.each do |column| %>
-  <div id="left" style="float:left;width:250px;padding:3px;margin:5px;">
-    <h1><%= column.name.capitalize %></h1>
-    <br/>
-      <div id="files">
-      	<% column.get.each do |post| %>
-      	  <b><%= post.body %></b><br/>
-      	  <i><%= post.posted_at %></i> - <a href="<%=post.url%>">url</a>
-      	  <p/>
-      	<% end %>
-      </div>
-  </div>	
+<% columns = Columnlog::Column.all.reject {|c| c.updated_at.nil? } %>
+<div id="columns">
+<% columns.sort_by {|c| c.updated_at }.reverse.each do |column| %>
+<div class="column column_<%= column.app_type.underscore %>" id="column_<%= column.name %>" style="width: <%=	 99.4 / columns.length %>%;">
+	<h2><%= link_to column.title, column.url %></h2>
+	<div class="posts">
+		<% column.get.each do |post| %>
+		<div class="post">
+			<% if post.title %><h3><%= link_to post.title, post.url %></h3><% end %>
+			<% if post.body %><div class="post_body"><%= post.body %></div><% end %>
+			<div class="meta_info"><%= post.posted_at.strftime("%B, %e %Y at %I:%M%p") %><% if post.author %> by <%= post.author %><% end %><% if post.url %>&nbsp;<%= link_to "&raquo;", post.url %><% end %></div>
+			<div class="clear"></div>
+		</div>
+		<% end %>
+	</div>
+</div>	
 <% end %>
-<p style="clear:both;">
+<div class="clear"></div>
+</div>

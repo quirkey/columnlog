@@ -20,7 +20,7 @@ module Columnlog
         @app ||= ::Twitter::Base.new(settings.username,settings.password)
         unauthorized! unless @app.verify_credentials.to_html == "Authorized"
         @app
-      rescue Twitter::CantConnect
+      rescue ::Twitter::CantConnect
         unauthorized!
       end
 

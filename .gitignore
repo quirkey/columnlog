@@ -1,3 +1,4 @@
+.DS_Store
 config/credentials.yml
 config/columns.yml
 config/deploy.rb

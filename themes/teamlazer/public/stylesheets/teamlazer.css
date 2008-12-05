@@ -1,0 +1,90 @@
+/******************************************************
+ *	theme(teamlazer).css									*
+\*****************************************************/
+
+body {
+	margin: 0px;
+	background: #FFF;
+	font-family: Helvetica, Arial, sans-serif;	
+	color: #333;
+	font-size: 14px;
+	text-align: 0px;
+	line-height: 150%;
+}
+a:link, a:visited {
+	color:#d72727;
+	text-decoration:none;
+}
+a:hover {
+	color:#581010;
+}
+a img {
+	border: none;
+}
+#container {
+	width: 98%;
+	margin: 0px auto;
+}
+#header {
+	width: 100%;
+	min-width: 940px;
+	_width: 940px;
+	position:relative;
+	height: 221px;
+	text-align:center;
+	background: url(/images/lazer_bg.gif) 0px 7px repeat-x;
+	z-index: 0;
+}
+#logo {
+	margin: 0px auto;
+	padding: 7px 0px;
+}
+#lazer_left, #lazer_right {
+	width: 220px;
+	position:absolute;
+	top: 0px;
+}
+#lazer_left {
+	left: 0px;
+}
+#lazer_right {
+	right: 0px;
+}
+#main {
+	text-align: center;
+	padding: 20px 120px;
+	position: relative;
+}
+#columns {
+	text-align: left;
+	margin: 30px auto;
+	z-index: 10;
+}
+h1, h2 {
+	color: #A11D1D;
+	border-bottom: 2px solid #d72727;
+}
+h2 {
+	text-align: center;
+}
+h3 {
+	margin: 0px;
+}
+.column {
+	float:left;
+	min-width: 300px;
+	width: 25%;
+}
+.post {
+	padding: 12px;
+	border-bottom: 1px dotted #d72727;
+}
+.meta_info {
+	font-size: 11px;
+	color: #666;
+}
+.clear {
+	font-size: 1px;
+	line-height: 0px;
+	clear:both;
+}

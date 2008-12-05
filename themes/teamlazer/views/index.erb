@@ -1,0 +1,19 @@
+<% columns = Columnlog::Column.all.reject {|c| c.updated_at.nil? } %>
+<div id="columns">
+<% columns.sort_by {|c| c.updated_at }.reverse.each do |column| %>
+<div class="column column_<%= column.app_type.underscore %>" id="column_<%= column.name %>">
+	<h2><%= link_to column.title, column.url %></h2>
+	<div class="posts">
+		<% column.get.each do |post| %>
+		<div class="post">
+			<% if post.title %><h3><%= link_to post.title, post.url %></h3><% end %>
+			<% if post.body %><div class="post_body"><%= post.body %></div><% end %>
+			<div class="meta_info"><%= post.posted_at.strftime("%B, %e %Y at %I:%M%p") %><% if post.author %> by <%= post.author %><% end %><% if post.url %>&nbsp;<%= link_to "&raquo;", post.url %><% end %></div>
+			<div class="clear"></div>
+		</div>
+		<% end %>
+	</div>
+</div>	
+<% end %>
+<div class="clear"></div>
+</div>

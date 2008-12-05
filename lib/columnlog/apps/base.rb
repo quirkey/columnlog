@@ -4,7 +4,7 @@ module Columnlog
       attr_reader :settings
       
       def initialize(settings = SuperHash.new)
-        @settings = settings
+        @settings = SuperHash.new(settings)
         app
       end
       

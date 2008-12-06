@@ -23,6 +23,7 @@ end
   apps/last_fm
   apps/flickr
   apps/text
+  apps/atom
 }.each do |file|
     require File.join('columnlog', file)
   end

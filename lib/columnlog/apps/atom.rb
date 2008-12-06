@@ -9,23 +9,22 @@ module Columnlog
 
       def get(how_many = nil)
         super
-        puts app.entries.inspect
-        # out = []
-        # doc = app.xpath('/rss/channel/item').collect {|i| out << to_post(i) }
-        # out.first(how_many)
+        out = []
+        doc = app.xpath('/feed/entry').collect {|i| out << to_post(i) }
+        out.first(how_many)
       end
 
       def app
-        @app ||= Atom::Feed.new(settings.url)
+        @app ||= Nokogiri::XML.parse(open(settings.url))
       end
       
       protected
       def to_post(item, other = {})
         Post.new({:title => get_inner_element(item, 'title'),
-                  :body => get_inner_element(item, 'description'), 
-                  :author => get_inner_element(item, 'author') || get_inner_element(item, 'dc:creator'),
-                  :posted_at => get_inner_element(item, 'pubDate'),
-                  :url => get_inner_element(item, 'link')
+                  :body => get_inner_element(item, 'content'), 
+                  :author => get_inner_element(item, 'author/name'),
+                  :posted_at => get_inner_element(item, 'published'),
+                  :url => get_inner_element(item, 'link')['href']
                   })
       end
       

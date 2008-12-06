@@ -31,9 +31,9 @@ gem_dependency 'net/http'
 gem_dependency 'open-uri'
 gem_dependency 'twitter'
 gem_dependency 'nokogiri'
-gem_dependency 'atom-tools', 'atom/entry'
-gem_dependency 'atom-tools', 'atom/collection'
-gem_dependency 'atom-tools', 'atom/feed'
+# gem_dependency 'atom-tools', 'atom/entry'
+# gem_dependency 'atom-tools', 'atom/collection'
+# gem_dependency 'atom-tools', 'atom/feed'
 gem_dependency 'flickr', 'vendor/flickr/lib/flickr'
 
 missing_gems?

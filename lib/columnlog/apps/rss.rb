@@ -15,7 +15,7 @@ module Columnlog
       end
 
       def app
-        Nokogiri::XML.parse(open(settings.url))
+        @app ||= Nokogiri::XML.parse(open(settings.url))
       end
       
       protected

@@ -1,4 +1,4 @@
-[submodule "sinatra"]
+[submodule "vendor/sinatra"]
 	path = vendor/sinatra
 	url = git://github.com/bmizerany/sinatra.git
 [submodule "vendor/flickr"]

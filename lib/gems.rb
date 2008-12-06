@@ -23,6 +23,8 @@ def missing_gems?
   end
 end
 
+gem_dependency 'cgi'
+gem_dependency 'redcloth'
 gem_dependency 'activesupport'
 gem_dependency 'yaml'
 gem_dependency 'chronic'

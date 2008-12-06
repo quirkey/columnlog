@@ -66,5 +66,20 @@ module Columnlog
       link ||= text
       "<a href=\"#{link}\">#{text}</a>"
     end
+    
+    def textilize(text)
+     if text.blank?
+       ""
+     else
+       textilized = RedCloth.new(text, [ :hard_breaks ])
+       textilized.hard_breaks = true if textilized.respond_to?("hard_breaks=")
+       textilized.to_html
+     end
+    end
+    
+    def escape(text)
+      CGI.escapeHTML(text)
+    end
+    
   end
 end

@@ -1,7 +1,7 @@
 module Columnlog
   module Apps
     class Gist < Base
-      
+      include Columnlog::TextHelper
       @@gist_url = 'http://gist.github.com/%s.txt'
       
       def post(content)
@@ -9,8 +9,13 @@ module Columnlog
 
       def get(how_many = nil)
         super
-        doc = Nokogiri::HTML(open("http://gist.github.com/mrb"))
-        doc.css('div.file').collect{|x| to_post(x.to_html) }
+        out = []
+        doc = Nokogiri::HTML(open("http://gist.github.com/#{settings.username}"))
+        doc.css('div.file').collect{|x|
+          gist = x.css('div.info').css('a').inner_text.split(" ")[1]
+          out << to_post(open(@@gist_url % gist).read)
+        }
+        out.first(how_many)
       end
 
       def app
@@ -19,7 +24,7 @@ module Columnlog
       
       protected
       def to_post(gist, other = {})
-        Post.new({:body => gist}.merge(other))
+        Post.new({:body => textilize(escape(gist))}.merge(other))
       end
       
     end

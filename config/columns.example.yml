@@ -22,3 +22,20 @@ records:
       username: test
       password: test
     shortcut: '*tum'
+  - id: 3
+    name: gist
+    title: EXAMPLE GIST COLUMN
+    app_type: Gist
+    url: http://gist.github.com/yourname
+    settings:
+      username: yourname
+      password: yourpass
+    shortcut: '*gi'
+  - id: 3
+    name: text
+    title: EXAMPLE TEXT COLUMN
+    app_type: Text
+    url: http://yoururl.com
+    settings:
+      data_file: text.yml
+    shortcut: '*te'

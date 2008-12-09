@@ -1,12 +1,4 @@
 <% columns = Columnlog::Column.all.reject {|c| c.updated_at.nil? } %>
-<div class="column home_description">
-	<h2>Hello</h2>
-	<ul>
-		<% columns.each do |column| %>
-		<li><a href="#column_<%= column.name %>" id="link_to_column_<%= column.name %>"><%= column.title %></a></li>
-		<% end %>
-	</ul>
-</div>
 <div id="columns">
 <% columns.sort_by {|c| c.updated_at }.reverse.each do |column| %>
 <div class="column column_<%= column.app_type.underscore %>" id="column_<%= column.name %>" style="width: <%=	 99.4 / columns.length %>%;">

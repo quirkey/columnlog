@@ -5,7 +5,7 @@ def gem_dependency(gem_name, lib_name = nil)
   lib_name ||= gem_name
   begin
     require lib_name
-  rescue ::RuntimeError => e
+  rescue LoadError => e
     $missing_gems << gem_name
   end
 end

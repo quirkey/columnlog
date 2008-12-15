@@ -5,7 +5,7 @@ def gem_dependency(gem_name, lib_name = nil)
   lib_name ||= gem_name
   begin
     require lib_name
-  rescue MissingSourceFile => e
+  rescue ::RuntimeError => e
     $missing_gems << gem_name
   end
 end

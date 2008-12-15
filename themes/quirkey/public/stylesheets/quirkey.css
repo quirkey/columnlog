@@ -48,16 +48,14 @@ a:hover {
 #columns {
 /*	white-space: nowrap;*/
 	width: auto;
-	margin-left: 200px;
 }
 .column {
 	width: 350px;
 	margin: 0px;
-/*	margin-bottom: 30000px;*/
 	border-top: 1px solid #13171E;
 	border-right: 2px solid #666;
 	float:left;
-	height: 480px;
+	min-height: 500px;
 }
 .post {
 	padding: 10px;

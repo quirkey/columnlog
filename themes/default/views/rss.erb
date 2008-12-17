@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	<channel>
+		<title><%= Columnlog::Column.title %></title>
+		<description>Latest posts from <%= Columnlog::Column.title %></description>
+		<link><%= Columnlog::Column.url %></link>
+		<lastBuildDate>Mon, 28 Aug 2006 11:12:55 -0400 </lastBuildDate>
+		<pubDate>Tue, 29 Aug 2006 09:00:00 -0400</pubDate>
+
+		<% @posts.each do |post| %>
+		<item>
+			<title><![CDATA[<%= post.column.title %>: <%= post.title ? post.title : post.body %>]]></title>
+			<description><![CDATA[<%= post.body %>]]></description>
+			<link><%= post.url %></link>
+			<guid isPermaLink="true"><%= post.url %></guid>
+			<pubDate><%= post.posted_at.strftime('%a, %d %b %Y %H:%M:%S %z') %></pubDate>
+		</item>
+		<% end %>
+	</channel>
+</rss>

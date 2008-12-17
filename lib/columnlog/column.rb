@@ -38,6 +38,16 @@ module Columnlog
         'default'
       end
       
+      def posts(num)
+        posts = []
+        self.all.each do |column| 
+          column_posts = column.get
+          column_posts.each {|p| p.column = column }
+          posts.concat column_posts
+        end
+        posts.flatten.sort {|a,b| b.posted_at <=> a.posted_at }.first(num).compact
+      end
+      
       def cache_for
         class_attributes[:cache_for] || 300
       end
@@ -63,6 +73,7 @@ module Columnlog
     def how_many
       @attributes['how_many'] || self.class.class_attributes['how_many'] || 10
     end
+    
     
     def updated_at
       get && get.first ? get.first.posted_at : nil

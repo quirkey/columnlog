@@ -20,6 +20,13 @@ get '/' do
   erb_with_theme :index
 end
 
+get '/posts.xml' do
+  content_type 'text/xml'
+  @posts = Columnlog::Column.posts(15)
+  erb_with_theme :rss, :layout => false
+end
+
+
 get '/new' do
   require_administrative_privileges
   erb_with_theme :new

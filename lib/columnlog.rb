@@ -15,6 +15,7 @@ end
   themes
   post
   column
+  errors
   apps/base
   apps/twitter 
   apps/tumblr

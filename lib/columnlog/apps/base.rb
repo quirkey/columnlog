@@ -21,7 +21,7 @@ module Columnlog
       def app; end
       
       def unauthorized!
-        raise(Errors::UnauthorizedApp, "Could not log you in for #{self.class} with username: #{settings.username}")
+        raise(Columnlog::Errors::UnauthorizedApp, "Could not log you in for #{self.class} with username: #{settings.username}")
       end
     end
   end

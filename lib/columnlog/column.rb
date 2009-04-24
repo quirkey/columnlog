@@ -66,7 +66,7 @@ module Columnlog
     def get(how_many = nil)
       how_many ||= self.how_many
       cache.fetch(cache_key(how_many)) do
-        app.get(how_many)
+        app.get(how_many).compact
       end
     end
     

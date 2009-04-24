@@ -17,19 +17,15 @@ module Columnlog
       end
 
       def app
-        @app ||= ::Twitter::Base.new(settings.username,settings.password)
-        unauthorized! unless @app.verify_credentials.to_html == "Authorized"
-        @app
-      rescue ::Twitter::CantConnect
-        unauthorized!
+        @app ||= ::Twitter::Base.new(::Twitter::HTTPAuth.new(settings.username,settings.password))
       end
 
       protected
       def to_post(tweet, other = {})
-        Post.new({:body => make_at_linked(tweet["text"]), 
-                  :author => tweet["from_user"], 
-                  :posted_at => tweet["created_at"], 
-                  :url => "http://twitter.com/#{tweet['from_user']}/status/#{tweet['id']}"}.merge(other))
+        Post.new({:body => make_at_linked(tweet.text), 
+                  :author => tweet.from_user, 
+                  :posted_at => tweet.created_at, 
+                  :url => "http://twitter.com/#{tweet.from_user}/status/#{tweet.id}"}.merge(other))
       end
       
       def make_at_linked(text)
